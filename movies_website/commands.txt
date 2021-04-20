@@ -1,0 +1,68 @@
+php artisan make:model Tag -m
+
+php artisan make:model Producer -m
+
+php artisan make:model Movie -m
+
+php artisan make:model TVShow -m
+
+php artisan make:model Genre -m
+
+php artisan make:model Actor -m
+
+php artisan make:model Role -m
+
+
+php artisan make:migration create_genre_movie_table
+
+php artisan make:migration create_genre_tv_show_table
+
+php artisan make:migration create_actor_movie_table
+
+php artisan make:migration create_actor_tv_show_table
+
+
+php artisan make:controller MovieController --resource --model=Movie
+
+php artisan make:controller TVShowController --resource --model=TVShow
+
+php artisan make:controller TagController --resource --model=Tag
+
+php artisan make:controller GenreController --resource --model=Genre
+
+php artisan make:controller ActorController --resource --model=Actor
+
+php artisan make:controller ProducerController --resource --model=Producer
+
+php artisan make:controller UserController --resource --model=User
+
+
+php artisan make:middleware AccessAdmin
+
+
+php artisan make:factory GenreFactory --model=Genre
+
+php artisan make:factory TagFactory --model=Tag
+
+php artisan make:factory ProducerFactory --model=Producer
+
+php artisan make:factory ActorFactory --model=Actor
+
+php artisan db:seed
+
+
+php artisan route:list
+
+php artisan migrate
+
+php artisan migrate:rollback
+
+php artisan migrate:refresh
+
+php artisan migrate:refresh --seed
+
+
+composer require intervention/image
+
+
+
